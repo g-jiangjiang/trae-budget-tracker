@@ -12,18 +12,27 @@ def init_data():
         with open(DATA_FILE, "w", encoding="utf-8") as f:
             json.dump([], f)
         return []
+    except json.JSONDecodeError:
+        print("错误：数据文件格式损坏，将重新初始化。")
+        with open(DATA_FILE, "w", encoding="utf-8") as f:
+            json.dump([], f)
+        return []
 
 # 保存数据
 def save_data(records):
-    with open(DATA_FILE, "w", encoding="utf-8") as f:
-        json.dump(records, f, ensure_ascii=False, indent=2)
+    try:
+        with open(DATA_FILE, "w", encoding="utf-8") as f:
+            json.dump(records, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"保存数据失败：{str(e)}")
 
 # 添加记录
-def add_record(amount, category, note=""):
+def add_record(amount, category, payment_method="", note=""):
     records = init_data()
     records.append({
         "amount": amount,
         "category": category,
+        "payment_method": payment_method,
         "note": note,
         "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     })

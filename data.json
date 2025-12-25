@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "amount": 10.0,
+    "category": "666",
+    "note": "222",
+    "time": "2025-12-21 19:01:05"
+  },
+  {
+    "amount": -1.0,
+    "category": "000",
+    "payment_method": "000",
+    "note": "",
+    "time": "2025-12-25 17:48:17"
+  },
+  {
+    "amount": 0.0,
+    "category": "0",
+    "payment_method": "0",
+    "note": "0",
+    "time": "2025-12-25 17:48:35"
+  }
+]
