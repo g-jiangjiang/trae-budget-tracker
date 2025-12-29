@@ -17,5 +17,12 @@
     "note": "月收入",
     "payment_method": "支付宝",
     "time": "2025-12-25 17:02:27"
+  },
+  {
+    "amount": 200.0,
+    "category": "测试",
+    "note": "测试记录",
+    "payment_method": "微信",
+    "time": "2025-12-25 17:30:00"
   }
 ]
